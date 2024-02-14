@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Home} from "./components/Home.tsx";
+import {Person} from "./components/Person.tsx";
+import {PersonList} from "./components/PersonList.tsx";
+import {Status} from "./components/Status.tsx";
+import {Heading} from "./components/Heading.tsx";
+import {Button} from "./components/Button.tsx";
+import {Input} from "./components/Input.tsx";
+import {Container} from "./components/Container.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const personName = {
+        first: 'Hikmet',
+        last: 'Kütük'
+    }
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const nameList = [
+        {
+            first: 'Yuudai',
+            last: 'Adhiambo'
+        },
+        {
+            first: 'Dafne',
+            last: 'Rudolf'
+        },
+        {
+            first: 'Brita',
+            last: 'Apollonius'
+        }
+    ]
+    return (
+        <>
+            <Heading>Name List</Heading>
+            <Home name='Hikmet' messageCount={2} isLoggedIn={false}/>
+            <Person name={personName}/>
+            <PersonList names={nameList}/>
+            <Status status='success'/>
+            <Input value='' handleChange={(event) => console.log(event)}/>
+            <Button handleClick={(event, id) => {
+                console.log('Button clicked', event, id)
+            }}/>
+            <Container styles={{border: '1px solid black', padding: '1rem'}}/>
+        </>
+    )
 }
 
 export default App
