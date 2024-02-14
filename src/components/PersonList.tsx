@@ -4,7 +4,6 @@ type PersonListProps = {
         last: string
     }[]
 }
-
 export const PersonList = (props: PersonListProps) => {
     return (
         <div>

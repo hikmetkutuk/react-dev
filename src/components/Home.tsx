@@ -3,7 +3,6 @@ type HomeProps = {
     messageCount: number
     isLoggedIn: boolean
 }
-
 export const Home = (props: HomeProps) => {
     return (
         <div>
