@@ -1,12 +1,12 @@
 import './App.css'
-import {Home} from "./components/Home.tsx";
-import {Person} from "./components/Person.tsx";
-import {PersonList} from "./components/PersonList.tsx";
-import {Status} from "./components/Status.tsx";
-import {Heading} from "./components/Heading.tsx";
-import {Button} from "./components/Button.tsx";
-import {Input} from "./components/Input.tsx";
-import {Container} from "./components/Container.tsx";
+import {Home} from "./components/props/Home.tsx";
+import {Person} from "./components/props/Person.tsx";
+import {PersonList} from "./components/props/PersonList.tsx";
+import {Status} from "./components/props/Status.tsx";
+import {Heading} from "./components/props/Heading.tsx";
+import {Button} from "./components/props/Button.tsx";
+import {Input} from "./components/props/Input.tsx";
+import {Container} from "./components/props/Container.tsx";
 
 function App() {
     const personName = {
