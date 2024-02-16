@@ -7,6 +7,10 @@ import {Heading} from "./components/props/Heading.tsx";
 import {Button} from "./components/props/Button.tsx";
 import {Input} from "./components/props/Input.tsx";
 import {Container} from "./components/props/Container.tsx";
+import {ThemeContextProvider} from "./components/context/ThemeContext.tsx";
+import {Box} from "./components/context/Box.tsx";
+import {UserContextProvider} from "./components/context/UserContext.tsx";
+import {User} from "./components/context/User.tsx";
 
 function App() {
     const personName = {
@@ -40,6 +44,12 @@ function App() {
                 console.log('Button clicked', event, id)
             }}/>
             <Container styles={{border: '1px solid black', padding: '1rem'}}/>
+            <ThemeContextProvider>
+                <Box/>
+            </ThemeContextProvider>
+            <UserContextProvider>
+                <User/>
+            </UserContextProvider>
         </>
     )
 }
